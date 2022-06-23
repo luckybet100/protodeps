@@ -1,3 +1,5 @@
+version: "1.0"
+project: basic
 targets:
   - name: golang
     plugins:
