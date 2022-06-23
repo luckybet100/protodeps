@@ -25,7 +25,7 @@ deps:
     git: git@github.com:envoyproxy/protoc-gen-validate.git
   - name: protodeps-sample-basic
     git: https://github.com/luckybet100/protodeps.git
-    ref: v1.0.1
+    ref: v1.0.3
 imports:
   - path: .
     from: protoc-gen-validate

@@ -4,7 +4,7 @@ package models;
 
 option go_package = "./proto";
 
-import "validate/validate.proto";
+import "protoc-gen-validate/validate/validate.proto";
 
 message HelloRequest {
   string name = 1 [(validate.rules).string.min_len = 1];

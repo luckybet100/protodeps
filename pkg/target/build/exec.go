@@ -25,6 +25,8 @@ func buildTarget(
 		command = append(command, "-I", importPath.Absolute())
 	}
 
+	command = append(command, "-I", ".protodeps")
+
 	for _, plugin := range target.Plugins {
 		command = append(command, fmt.Sprintf("--%s_out=%s", plugin.Name, plugin.Output))
 		if plugin.Opts != "" {
