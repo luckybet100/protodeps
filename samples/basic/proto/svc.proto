@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package svc;
+
+option go_package = "./proto";
+
+import "proto/models.proto";
+
+service Hello {
+  rpc Hello(models.HelloRequest) returns (models.HelloReply) {}
+}

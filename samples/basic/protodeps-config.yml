@@ -1,0 +1,31 @@
+targets:
+  - name: golang
+    plugins:
+      - name: go-grpc
+        out: gen
+        opts: paths=import
+      - name: go
+        out: gen
+        opts: paths=import
+      - name: validate
+        out: '"lang=go:gen"'
+  - name: flutter
+    plugins:
+      - name: dart
+        out: gen/lib/proto
+src:
+  - path: proto/svc.proto
+  - path: proto/models.proto
+create_dirs:
+  - gen
+deps:
+  - name: protoc-gen-validate
+    git: git@github.com:envoyproxy/protoc-gen-validate.git
+imports:
+  - path: .
+    from: protoc-gen-validate
+  - path: .
+plugins:
+  - name: validate
+    git: github.com/envoyproxy/protoc-gen-validate
+    version: v0.6.7

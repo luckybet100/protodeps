@@ -1,0 +1,6 @@
+bin
+samples/basic/gen
+samples/basic/.protodeps
+samples/gitdeps/.protodeps
+samples/gitdeps/gen
+.idea
